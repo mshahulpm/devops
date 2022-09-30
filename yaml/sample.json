@@ -1,0 +1,1 @@
+{"name":"shahul","age":27,"place":"mlp","object":{"key1":"hello hey","key2":123,"key":4},"array":[{"name":"shahul","age":27},{"name":"nazeem","age":22},{"name":"hisham","age":23}],"array_of_string":["abc","bcd","cde","def"],"mixed_array":[{"name":"shahul","age":27},"random string",1234,true,"yes","no","on","off",1]}

@@ -1,0 +1,11 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mshahulpm/devops.git",
+  "author": "Mohammed Shahul P M <mshahulpm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "yamljs": "^0.3.0"
+  }
+}

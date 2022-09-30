@@ -1,0 +1,19 @@
+{
+    "multiLineString": "hello this is a multi line string \nline 2 is goes here \nnext line\n",
+    "multiSingleLine": "this multi lined single line  line 2 will combined with one  and so on.\n",
+    "example": {
+        "apiVersion": "1.0.2",
+        "kind": "ConfigMap",
+        "metadata": {
+            "name": "some-config file"
+        },
+        "data": {
+            "config.conf": "log_dest stdout\nlog_type all \nlog_timestamp true \nlistener 9001\n"
+        }
+    },
+    "command": [
+        "sh",
+        "-c",
+        "http () {\n    local path=\"${1}\"\n    set -- -XGET -s --fail \n    curl -k \"$@\" \"http://localhost:5601${path}\"  \n}\nhttp \"/app/kibana\"\n"
+    ]
+}

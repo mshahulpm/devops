@@ -1,0 +1,39 @@
+multiLineString: | 
+   hello this is a multi line string 
+   line 2 is goes here 
+   next line 
+
+multiSingleLine: > 
+   this multi lined single line 
+   line 2 will combined with one 
+   and so on.
+
+# example 
+
+example:
+  apiVersion: 1.0.2
+  kind: ConfigMap 
+  metadata:
+   name: 'some-config file'
+  data: 
+    config.conf: | 
+      log_dest stdout
+      log_type all 
+      log_timestamp true 
+      listener 9001 
+
+
+# example of a shell script 
+
+command:
+ - sh 
+ - -c 
+ - | 
+   #!/usr/bin/env bash -e 
+   http () {
+       local path="${1}"
+       set -- -XGET -s --fail 
+       #  some more stuff 
+       curl -k "$@" "http://localhost:5601${path}"  
+   }
+   http "/app/kibana" 
